@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mp3.html</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="author" content="Stephen Hornblow">
+  <link rel="icon" type="image/x-icon" href="FavIcon.png">
+</head>
+<body>
+  <header>
+    <h1>mp3.html: CD Archive</h1>
+  </header>
+
+  <main>
+    <section id="cd-display">
+      <div id="album-info" class="info-pane">
+        <h2 id="album-title"></h2>
+        <p id="album-artist"></p>
+        <p id="album-year"></p>
+        <p><strong>Genre:</strong> <span id="genre"></span></p>
+        <div id="spotify-player" class="info-pane">
+            
+          </div>
+      </div>
+
+      <div id="cd-cover">
+        <img id="cover-image" src="" alt="CD Cover"/>
+        <img id="disk-image" src="" alt="Disk Image" style="display: none; margin-top: 1rem;"/>
+      </div>
+
+      <div id="commentary" class="info-pane">
+        <p id="user-comment"></p>
+        <p><strong>Rating:</strong> <span id="rating"></span></p>
+        <p><strong>Favorite Track:</strong> <span id="favorite-track"></span></p>
+      </div>
+    </section>
+
+    
+    <section id="carousel-wrapper">
+      <div id="carousel-track">
+        
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

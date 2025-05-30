@@ -1,0 +1,146 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #0d0d0d;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: #0d0d0d;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #ccc;
+  }
+  
+  /* Main layout */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* CD Display Section */
+  #cd-display {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+    transition: all 0.5s ease;
+  }
+  
+  /* CD Disk Image */
+  .cd-disk {
+    animation: spin 5s linear infinite;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-color: transparent !important;
+  }
+  
+  /* Info pane (optional detail section) */
+  .info-pane {
+    width: 25%;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  .info-pane.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* CD Cover in Carousel Only */
+  #cd-cover {
+    width: 20%;
+    text-align: center;
+    transition: all 0.4s ease;
+    background-color: transparent !important;
+  }
+  
+  #cd-cover img {
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: transparent !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Carousel Section */
+  #carousel-wrapper {
+    height: 160px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  #carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    position: relative;
+  }
+  
+  .carousel-item {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    flex-shrink: 0;
+    opacity: 0.6;
+    border-radius: 10px;
+    background-color: transparent !important;
+  }
+  
+  .carousel-item.selected {
+    transform: scale(1.4);
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  /* Spotify Player */
+  #spotify-player iframe {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #spotify-player {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Disk Animation 
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  */
+  
